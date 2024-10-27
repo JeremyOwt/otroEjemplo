@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('imagenes/imagen\ fondo.png'); /* Cambia por la ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el área del body */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen al fondo mientras haces scroll */
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px; /* Reducir el padding superior */
+    background-color: black;
+    border-bottom: none;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px; /* Un valor más bajo o prueba sin margen */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+nav ul li a:hover i {
+    transform: rotate(360deg);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.is-active i {
+    transform: rotate(90deg);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 130px; /* Espacio para el header */
+    padding-bottom: 50px; /* Espacio entre el último cuadro y el footer */
+}
+
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; /* Reducir espacio entre cuadros */
+    margin-left: 10px; /* Reducir espacio lateral */
+    padding: 10px; /* Reducir padding interno */
+    background-color: #d4e1f5;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    height: 400px; /* Ajusta altura del cuadro */
+}
+
+
+
+
+.footer h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a:hover {
+    color: #ffffff;
+}
+
+.footer .social-icons a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    color: #b8b8b8;
+    font-size: 14px;
+}
+
+/* Ajustes de espaciado entre iconos sociales */
+.d-flex.gap-3 > a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.d-flex.gap-3 > a:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+.abajo{
+    margin-left: 75px;
+}
+.cuadro .img {
+    width: 50%; /* Asegura que el contenedor de imagen ocupe el ancho de la columna */
+    height: 80%; /* Opcional: solo si quieres que el contenedor de imagen ocupe toda la altura */
+}
+
+.cuadro .img img {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: 100%; /* La imagen ocupa el alto completo del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    border-radius: 10px; /* Opcional: solo si quieres bordes redondeados */
+}
+.form-container {
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%; /* Ancho completo */
+    max-width: 800px; /* Ajusta el ancho máximo si es necesario */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Ajustar la anchura de los inputs y textareas */
+.input-group .form-control {
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 40px; /* Espacio a la izquierda para el icono */
+    width: 100%; /* Ancho completo */
+}
+
+
+
+
+h2 {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    color: #333; /* Color del texto */
+}
+
+.input-group {
+    position: relative; /* Posicionamiento relativo para alinear los iconos */
+}
+
+.input-group-text {
+    background-color: #007bff; /* Color de fondo del icono */
+    border: none; /* Sin borde */
+    color: white; /* Color del icono */
+}
+
+.input-group .form-control {
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 40px; /* Espacio a la izquierda para el icono */
+}
+
+.input-group .form-control:focus {
+    border-color: #007bff; /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+textarea {
+    resize: none; /* Deshabilitar el cambio de tamaño */
+}
+
+button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+/* Para dispositivos móviles, usar flex-direction: column en .cuadro */
+@media (max-width: 767.98px) {
+    .cuadro {
+        flex-direction: column;
+        height: auto; /* Ajuste de altura automática en dispositivos móviles */
+    }
+    .cuadro .img {
+        width: 100%; /* La imagen ocupa el ancho completo en móviles */
+        height: auto; /* Ajuste de altura automática */
+    }
+}
+
+/* Ajustes en header y nav */
+header {
+    width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+/* Ajuste de texto y botón en formulario */
+.form-container {
+    padding: 15px;
+}
+
+button {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Footer ajustes */
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Ajustes de imagen en cuadro */
+.cuadro .img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.1rem; /* Ajusta el tamaño según tus preferencias */
+}
